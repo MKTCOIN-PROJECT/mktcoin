@@ -1760,7 +1760,7 @@ bool CWallet::SelectCoins(const CAmount& nTargetValue, set<pair<const CWalletTx*
         BOOST_FOREACH (CAmount v, obfuScationDenominations) {
             BOOST_FOREACH (const COutput& out, vCoins) {
                 if (out.tx->vout[out.i].nValue == v                                               //make sure it's the denom we're looking for
-                    && nValueRet + out.tx->vout[out.i].nValue < nTargetValue + (0.1 * COIN) + 100 //round the amount up to .1 MLM over
+                    && nValueRet + out.tx->vout[out.i].nValue < nTargetValue + (0.1 * COIN) + 100 //round the amount up to .1 MKT over
                     ) {
                     CTxIn vin = CTxIn(out.tx->GetHash(), out.i);
                     int rounds = GetInputObfuscationRounds(vin);
@@ -1822,12 +1822,12 @@ bool CWallet::SelectCoinsByDenominations(int nDenom, CAmount nValueMin, CAmount 
 
             // Function returns as follows:
             //
-            // bit 0 - 10000 MLM+1 ( bit on if present )
-            // bit 1 - 1000 MLM+1
-            // bit 2 - 100 MLM+1
-            // bit 3 - 10 MLM+1
-            // bit 4 - 1 MLM+1
-            // bit 5 - .1 MLM+1
+            // bit 0 - 10000 MKT+1 ( bit on if present )
+            // bit 1 - 1000 MKT+1
+            // bit 2 - 100 MKT+1
+            // bit 3 - 10 MKT+1
+            // bit 4 - 1 MKT+1
+            // bit 5 - .1 MKT+1
 
             CTxIn vin = CTxIn(out.tx->GetHash(), out.i);
 
@@ -2152,9 +2152,9 @@ bool CWallet::CreateTransaction(const vector<pair<CScript, CAmount> >& vecSend,
                     if (coin_type == ALL_COINS) {
                         strFailReason = _("Insufficient funds.");
                     } else if (coin_type == ONLY_NOT200000IFMN) {
-                        strFailReason = _("Unable to locate enough funds for this transaction that are not equal 200000 MLM.");
+                        strFailReason = _("Unable to locate enough funds for this transaction that are not equal 200000 MKT.");
                     } else if (coin_type == ONLY_NONDENOMINATED_NOT200000IFMN) {
-                        strFailReason = _("Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 200000 MLM.");
+                        strFailReason = _("Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 200000 MKT.");
                     } else {
                         strFailReason = _("Unable to locate enough Obfuscation denominated funds for this transaction.");
                         strFailReason += " " + _("Obfuscation uses exact denominated amounts to send funds, you might simply need to anonymize some more coins.");

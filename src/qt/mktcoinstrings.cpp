@@ -73,10 +73,10 @@ QT_TRANSLATE_NOOP("mktcoin-core", ""
 "Execute command when the best block changes (%s in cmd is replaced by block "
 "hash)"),
 QT_TRANSLATE_NOOP("mktcoin-core", ""
-"Fees (in MLM/Kb) smaller than this are considered zero fee for relaying "
+"Fees (in MKT/Kb) smaller than this are considered zero fee for relaying "
 "(default: %s)"),
 QT_TRANSLATE_NOOP("mktcoin-core", ""
-"Fees (in MLM/Kb) smaller than this are considered zero fee for transaction "
+"Fees (in MKT/Kb) smaller than this are considered zero fee for transaction "
 "creation (default: %s)"),
 QT_TRANSLATE_NOOP("mktcoin-core", ""
 "Flush database activity from memory pool to disk log every <n> megabytes "
@@ -168,10 +168,10 @@ QT_TRANSLATE_NOOP("mktcoin-core", ""
 "Unable to locate enough Obfuscation denominated funds for this transaction."),
 QT_TRANSLATE_NOOP("mktcoin-core", ""
 "Unable to locate enough Obfuscation non-denominated funds for this "
-"transaction that are not equal 10000 MLM."),
+"transaction that are not equal 10000 MKT."),
 QT_TRANSLATE_NOOP("mktcoin-core", ""
 "Unable to locate enough funds for this transaction that are not equal 10000 "
-"MLM."),
+"MKT."),
 QT_TRANSLATE_NOOP("mktcoin-core", ""
 "Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: "
 "%s)"),
@@ -278,7 +278,7 @@ QT_TRANSLATE_NOOP("mktcoin-core", "Error: Wallet locked, unable to create transa
 QT_TRANSLATE_NOOP("mktcoin-core", "Error: You already have pending entries in the Obfuscation pool"),
 QT_TRANSLATE_NOOP("mktcoin-core", "Failed to listen on any port. Use -listen=0 if you want this."),
 QT_TRANSLATE_NOOP("mktcoin-core", "Failed to read block"),
-QT_TRANSLATE_NOOP("mktcoin-core", "Fee (in MLM/kB) to add to transactions you send (default: %s)"),
+QT_TRANSLATE_NOOP("mktcoin-core", "Fee (in MKT/kB) to add to transactions you send (default: %s)"),
 QT_TRANSLATE_NOOP("mktcoin-core", "Finalizing transaction."),
 QT_TRANSLATE_NOOP("mktcoin-core", "Force safe mode (default: %u)"),
 QT_TRANSLATE_NOOP("mktcoin-core", "Found enough users, signing ( waiting %s )"),
@@ -309,7 +309,7 @@ QT_TRANSLATE_NOOP("mktcoin-core", "Invalid netmask specified in -whitelist: '%s'
 QT_TRANSLATE_NOOP("mktcoin-core", "Invalid port detected in masternode.conf"),
 QT_TRANSLATE_NOOP("mktcoin-core", "Invalid private key."),
 QT_TRANSLATE_NOOP("mktcoin-core", "Invalid script detected."),
-QT_TRANSLATE_NOOP("mktcoin-core", "Keep N MLM anonymized (default: %u)"),
+QT_TRANSLATE_NOOP("mktcoin-core", "Keep N MKT anonymized (default: %u)"),
 QT_TRANSLATE_NOOP("mktcoin-core", "Keep at most <n> unconnectable transactions in memory (default: %u)"),
 QT_TRANSLATE_NOOP("mktcoin-core", "Last Obfuscation was too recent."),
 QT_TRANSLATE_NOOP("mktcoin-core", "Last successful Obfuscation action was too recent."),

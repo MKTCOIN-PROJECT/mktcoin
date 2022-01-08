@@ -46,7 +46,7 @@ const std::string CLIENT_NAME("MktCoin Core");
 // TODO!!! git
 #define GIT_ARCHIVE 1
 #ifdef GIT_ARCHIVE
-#define GIT_COMMIT_ID "cbcb549"
+#define GIT_COMMIT_ID ""
 #define GIT_COMMIT_DATE "Tue, 9 Feb 2016 16:54:57 -0500"
 #endif
 

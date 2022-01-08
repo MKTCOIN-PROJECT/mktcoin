@@ -164,16 +164,16 @@
         <translation>Vahvista lompakon salaus</translation>
     </message>
     <message>
-        <source>MktCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your MLMs from being stolen by malware infecting your computer.</source>
-        <translation>MktCoin sulkeutuu salausprosessin ajaksi. Muista, että lompakon salaus ei voi täysin suojella MLMien varkaudelta, jos tietokoneesi sisältää haittaohjelmia.</translation>
+        <source>MktCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your MKTs from being stolen by malware infecting your computer.</source>
+        <translation>MktCoin sulkeutuu salausprosessin ajaksi. Muista, että lompakon salaus ei voi täysin suojella MKTien varkaudelta, jos tietokoneesi sisältää haittaohjelmia.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Oletko varma että tahdot salata lompakkosi?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR MLM&lt;/b&gt;!</source>
-        <translation>Varoitus: Jos salaat lompakkosi ja unohdat salausavaimesi, &lt;b&gt;menetät kaikki MLMisi&lt;/b&gt;</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR MKT&lt;/b&gt;!</source>
+        <translation>Varoitus: Jos salaat lompakkosi ja unohdat salausavaimesi, &lt;b&gt;menetät kaikki MKTisi&lt;/b&gt;</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -1091,32 +1091,32 @@ Please check the address and try again.</source>
         <translation>Valitse yksityisyyden taso.</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 10000 MLM</source>
-        <translation>Käytä 2 erillistä masternodea sekoittaaksesi enintään 10000 MLM</translation>
+        <source>Use 2 separate masternodes to mix funds up to 10000 MKT</source>
+        <translation>Käytä 2 erillistä masternodea sekoittaaksesi enintään 10000 MKT</translation>
     </message>
     <message>
-        <source>Use 8 separate masternodes to mix funds up to 10000 MLM</source>
-        <translation>Käytä 8 erillistä masternodea sekoittaaksesi enintään 10000 MLM</translation>
+        <source>Use 8 separate masternodes to mix funds up to 10000 MKT</source>
+        <translation>Käytä 8 erillistä masternodea sekoittaaksesi enintään 10000 MKT</translation>
     </message>
     <message>
         <source>Use 16 separate masternodes</source>
         <translation>Käytä 16 erillistä masternodea</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 MLM to anonymize 10000 MLM</source>
-        <translation>Tämä vaihtoehto on nopein ja maksaa noin ~0.025 MLM anonymoidaksesi 10000 MLM</translation>
+        <source>This option is the quickest and will cost about ~0.025 MKT to anonymize 10000 MKT</source>
+        <translation>Tämä vaihtoehto on nopein ja maksaa noin ~0.025 MKT anonymoidaksesi 10000 MKT</translation>
     </message>
     <message>
-        <source>This option is moderately fast and will cost about 0.05 MLM to anonymize 10000 MLM</source>
-        <translation>Tämä vaihtoehto on suhteellisen nopea ja maksaa 0.05 MLM anonymoidaksesi 10000 MLM</translation>
+        <source>This option is moderately fast and will cost about 0.05 MKT to anonymize 10000 MKT</source>
+        <translation>Tämä vaihtoehto on suhteellisen nopea ja maksaa 0.05 MKT anonymoidaksesi 10000 MKT</translation>
     </message>
     <message>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
         <translation>Tämä on hitain ja turvallisin vaihtoehto. Täydesti anonymisoiminen ei maksa mitään.</translation>
     </message>
     <message>
-        <source>0.1 MLM per 10000 MLM you anonymize.</source>
-        <translation>0.1 per 10000 MLM, jotka anonymisoit.</translation>
+        <source>0.1 MKT per 10000 MKT you anonymize.</source>
+        <translation>0.1 per 10000 MKT, jotka anonymisoit.</translation>
     </message>
     <message>
         <source>Obfuscation Configuration</source>
@@ -1503,8 +1503,8 @@ Please check the address and try again.</source>
         <translation>ei</translation>
     </message>
     <message>
-        <source>0 MLM</source>
-        <translation>0 MLM</translation>
+        <source>0 MKT</source>
+        <translation>0 MKT</translation>
     </message>
     <message>
         <source>Choose...</source>

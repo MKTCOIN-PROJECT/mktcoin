@@ -502,9 +502,9 @@ am__qt_libbitcoinqt_a_SOURCES_DIST = qt/bitcoinaddressvalidator.cpp \
 	qt/res/icons/transaction_conflicted.png \
 	qt/res/icons/tx_inout.png qt/res/icons/tx_input.png \
 	qt/res/icons/tx_output.png qt/res/icons/tx_mined.png \
-	qt/res/icons/unit_mlm.png qt/res/icons/unit_mmlm.png \
-	qt/res/icons/unit_umlm.png qt/res/icons/unit_tmlm.png \
-	qt/res/icons/unit_tmmlm.png qt/res/icons/unit_tumlm.png \
+	qt/res/icons/unit_mkt.png qt/res/icons/unit_mmkt.png \
+	qt/res/icons/unit_umkt.png qt/res/icons/unit_tmkt.png \
+	qt/res/icons/unit_tmmkt.png qt/res/icons/unit_tumkt.png \
 	qt/res/images/about.png qt/res/images/splash.png \
 	qt/res/images/splash_testnet.png \
 	qt/res/images/mktcoin_logo_horizontal.png \
@@ -2163,12 +2163,12 @@ EXTRA_DIST = leveldb $(am__append_18)
 #  qt/res/icons/tx_input.png \
 #  qt/res/icons/tx_output.png \
 #  qt/res/icons/tx_mined.png \
-#  qt/res/icons/unit_mlm.png \
-#  qt/res/icons/unit_mmlm.png \
-#  qt/res/icons/unit_umlm.png \
-#  qt/res/icons/unit_tmlm.png \
-#  qt/res/icons/unit_tmmlm.png \
-#  qt/res/icons/unit_tumlm.png
+#  qt/res/icons/unit_mkt.png \
+#  qt/res/icons/unit_mmkt.png \
+#  qt/res/icons/unit_umkt.png \
+#  qt/res/icons/unit_tmkt.png \
+#  qt/res/icons/unit_tmmkt.png \
+#  qt/res/icons/unit_tumkt.png
 
 #BITCOIN_QT_CPP = qt/bitcoinaddressvalidator.cpp \
 #	qt/bitcoinamountfield.cpp qt/bitcoingui.cpp \

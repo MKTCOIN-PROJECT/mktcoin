@@ -38,7 +38,7 @@ map<uint256, CObfuscationBroadcastTx> mapObfuscationBroadcastTxes;
 // Keep track of the active Masternode
 CActiveMasternode activeMasternode;
 
-/* *** BEGIN OBFUSCATION MAGIC - MLM **********
+/* *** BEGIN OBFUSCATION MAGIC - MKT **********
     Copyright (c) 2014-2015, Dash Developers
         eduffield - evan@dashpay.io
         udjinm6   - udjinm6@dashpay.io
@@ -780,7 +780,7 @@ void CObfuscationPool::ChargeRandomFees()
                 with using it to stop abuse. Otherwise it could serve as an attack vector and
                 allow endless transaction that would bloat mktcoins and make it unusable. To
                 stop these kinds of attacks 1 in 10 successful transactions are charged. This
-                adds up to a cost of 0.001 MLM per transaction on average.
+                adds up to a cost of 0.001 MKT per transaction on average.
             */
             if (r <= 10) {
                 LogPrintf("CObfuscationPool::ChargeRandomFees -- charging random fees. %u\n", i);
@@ -1433,7 +1433,7 @@ bool CObfuscationPool::DoAutomaticDenominating(bool fDryRun)
         // should have some additional amount for them
         nLowestDenom += OBFUSCATION_COLLATERAL * 4;
 
-    CAmount nBalanceNeedsAnonymized = nAnonymizeMLMAmount * COIN - pwalletMain->GetAnonymizedBalance();
+    CAmount nBalanceNeedsAnonymized = nAnonymizeMKTAmount * COIN - pwalletMain->GetAnonymizedBalance();
 
     // if balanceNeedsAnonymized is more than pool max, take the pool max
     if (nBalanceNeedsAnonymized > OBFUSCATION_POOL_MAX) nBalanceNeedsAnonymized = OBFUSCATION_POOL_MAX;
@@ -1916,10 +1916,10 @@ void CObfuscationPool::GetDenominationsToString(int nDenom, std::string& strDeno
 {
     // Function returns as follows:
     //
-    // bit 0 - 100MLM+1 ( bit on if present )
-    // bit 1 - 10MLM+1
-    // bit 2 - 1MLM+1
-    // bit 3 - .1MLM+1
+    // bit 0 - 100MKT+1 ( bit on if present )
+    // bit 1 - 10MKT+1
+    // bit 2 - 1MKT+1
+    // bit 3 - .1MKT+1
     // bit 3 - non-denom
 
 
@@ -1989,10 +1989,10 @@ int CObfuscationPool::GetDenominations(const std::vector<CTxOut>& vout, bool fSi
 
     // Function returns as follows:
     //
-    // bit 0 - 100MLM+1 ( bit on if present )
-    // bit 1 - 10MLM+1
-    // bit 2 - 1MLM+1
-    // bit 3 - .1MLM+1
+    // bit 0 - 100MKT+1 ( bit on if present )
+    // bit 1 - 10MKT+1
+    // bit 2 - 1MKT+1
+    // bit 3 - .1MKT+1
 
     return denom;
 }

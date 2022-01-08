@@ -8,7 +8,7 @@
 #include "spork.h"
 
 //
-// Bootup the Masternode, look for a 200000 MLM input and register on the network
+// Bootup the Masternode, look for a 200000 MKT input and register on the network
 //
 void CActiveMasternode::ManageStatus()
 {

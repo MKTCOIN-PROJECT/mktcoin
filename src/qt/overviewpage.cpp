@@ -33,7 +33,7 @@ class TxViewDelegate : public QAbstractItemDelegate
 {
     Q_OBJECT
 public:
-    TxViewDelegate() : QAbstractItemDelegate(), unit(BitcoinUnits::MLM)
+    TxViewDelegate() : QAbstractItemDelegate(), unit(BitcoinUnits::MKT)
     {
     }
 
@@ -276,7 +276,7 @@ void OverviewPage::setWalletModel(WalletModel* model)
         connect(model, SIGNAL(notifyWatchonlyChanged(bool)), this, SLOT(updateWatchOnlyLabels(bool)));
     }
 
-    // update the display unit, to not use the default ("MLM")
+    // update the display unit, to not use the default ("MKT")
     updateDisplayUnit();
 }
 
@@ -315,15 +315,15 @@ void OverviewPage::updateObfuscationProgress()
     if (!pwalletMain) return;
 
     QString strAmountAndRounds;
-    QString strAnonymizeMLMAmount = BitcoinUnits::formatHtmlWithUnit(nDisplayUnit, nAnonymizeMLMAmount * COIN, false, BitcoinUnits::separatorAlways);
+    QString strAnonymizeMKTAmount = BitcoinUnits::formatHtmlWithUnit(nDisplayUnit, nAnonymizeMKTAmount * COIN, false, BitcoinUnits::separatorAlways);
 
     if (currentBalance == 0) {
         ui->obfuscationProgress->setValue(0);
         ui->obfuscationProgress->setToolTip(tr("No inputs detected"));
 
         // when balance is zero just show info from settings
-        strAnonymizeMLMAmount = strAnonymizeMLMAmount.remove(strAnonymizeMLMAmount.indexOf("."), BitcoinUnits::decimals(nDisplayUnit) + 1);
-        strAmountAndRounds = strAnonymizeMLMAmount + " / " + tr("%n Rounds", "", nObfuscationRounds);
+        strAnonymizeMKTAmount = strAnonymizeMKTAmount.remove(strAnonymizeMKTAmount.indexOf("."), BitcoinUnits::decimals(nDisplayUnit) + 1);
+        strAmountAndRounds = strAnonymizeMKTAmount + " / " + tr("%n Rounds", "", nObfuscationRounds);
 
         ui->labelAmountRounds->setToolTip(tr("No inputs detected"));
         ui->labelAmountRounds->setText(strAmountAndRounds);
@@ -350,20 +350,20 @@ void OverviewPage::updateObfuscationProgress()
     CAmount nMaxToAnonymize = nAnonymizableBalance + currentAnonymizedBalance + nDenominatedUnconfirmedBalance;
 
     // If it's more than the anon threshold, limit to that.
-    if (nMaxToAnonymize > nAnonymizeMLMAmount * COIN) nMaxToAnonymize = nAnonymizeMLMAmount * COIN;
+    if (nMaxToAnonymize > nAnonymizeMKTAmount * COIN) nMaxToAnonymize = nAnonymizeMKTAmount * COIN;
 
     if (nMaxToAnonymize == 0) return;
 
-    if (nMaxToAnonymize >= nAnonymizeMLMAmount * COIN) {
+    if (nMaxToAnonymize >= nAnonymizeMKTAmount * COIN) {
         ui->labelAmountRounds->setToolTip(tr("Found enough compatible inputs to anonymize %1")
-                                              .arg(strAnonymizeMLMAmount));
-        strAnonymizeMLMAmount = strAnonymizeMLMAmount.remove(strAnonymizeMLMAmount.indexOf("."), BitcoinUnits::decimals(nDisplayUnit) + 1);
-        strAmountAndRounds = strAnonymizeMLMAmount + " / " + tr("%n Rounds", "", nObfuscationRounds);
+                                              .arg(strAnonymizeMKTAmount));
+        strAnonymizeMKTAmount = strAnonymizeMKTAmount.remove(strAnonymizeMKTAmount.indexOf("."), BitcoinUnits::decimals(nDisplayUnit) + 1);
+        strAmountAndRounds = strAnonymizeMKTAmount + " / " + tr("%n Rounds", "", nObfuscationRounds);
     } else {
         QString strMaxToAnonymize = BitcoinUnits::formatHtmlWithUnit(nDisplayUnit, nMaxToAnonymize, false, BitcoinUnits::separatorAlways);
         ui->labelAmountRounds->setToolTip(tr("Not enough compatible inputs to anonymize <span style='color:red;'>%1</span>,<br>"
                                              "will anonymize <span style='color:red;'>%2</span> instead")
-                                              .arg(strAnonymizeMLMAmount)
+                                              .arg(strAnonymizeMKTAmount)
                                               .arg(strMaxToAnonymize));
         strMaxToAnonymize = strMaxToAnonymize.remove(strMaxToAnonymize.indexOf("."), BitcoinUnits::decimals(nDisplayUnit) + 1);
         strAmountAndRounds = "<span style='color:red;'>" +
@@ -532,7 +532,7 @@ void OverviewPage::toggleObfuscation()
         ui->toggleObfuscation->setText(tr("Stop Obfuscation"));
 
 
-        if (nAnonymizeMLMAmount == 0) {
+        if (nAnonymizeMKTAmount == 0) {
             ObfuscationConfig dlg(this);
             dlg.setModel(walletModel);
             dlg.exec();

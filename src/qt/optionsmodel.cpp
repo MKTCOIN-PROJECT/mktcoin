@@ -62,7 +62,7 @@ void OptionsModel::Init()
 
     // Display
     if (!settings.contains("nDisplayUnit"))
-        settings.setValue("nDisplayUnit", BitcoinUnits::MLM);
+        settings.setValue("nDisplayUnit", BitcoinUnits::MKT);
     nDisplayUnit = settings.value("nDisplayUnit").toInt();
 
     if (!settings.contains("strThirdPartyTxUrls"))
@@ -76,11 +76,11 @@ void OptionsModel::Init()
     if (!settings.contains("nObfuscationRounds"))
         settings.setValue("nObfuscationRounds", 2);
 
-    if (!settings.contains("nAnonymizeMLMAmount"))
-        settings.setValue("nAnonymizeMLMAmount", 1000);
+    if (!settings.contains("nAnonymizeMKTAmount"))
+        settings.setValue("nAnonymizeMKTAmount", 1000);
 
     nObfuscationRounds = settings.value("nObfuscationRounds").toLongLong();
-    nAnonymizeMLMAmount = settings.value("nAnonymizeMLMAmount").toLongLong();
+    nAnonymizeMKTAmount = settings.value("nAnonymizeMKTAmount").toLongLong();
 
     if (!settings.contains("fShowMasternodesTab"))
         settings.setValue("fShowMasternodesTab", masternodeConfig.getCount());
@@ -147,8 +147,8 @@ void OptionsModel::Init()
 
     if (settings.contains("nObfuscationRounds"))
         SoftSetArg("-obfuscationrounds", settings.value("nObfuscationRounds").toString().toStdString());
-    if (settings.contains("nAnonymizeMLMAmount"))
-        SoftSetArg("-anonymizemlmamount", settings.value("nAnonymizeMLMAmount").toString().toStdString());
+    if (settings.contains("nAnonymizeMKTAmount"))
+        SoftSetArg("-anonymizemktamount", settings.value("nAnonymizeMKTAmount").toString().toStdString());
 
     language = settings.value("language").toString();
 }
@@ -228,8 +228,8 @@ QVariant OptionsModel::data(const QModelIndex& index, int role) const
             return settings.value("nThreadsScriptVerif");
         case ObfuscationRounds:
             return QVariant(nObfuscationRounds);
-        case AnonymizeMLMAmount:
-            return QVariant(nAnonymizeMLMAmount);
+        case AnonymizeMKTAmount:
+            return QVariant(nAnonymizeMKTAmount);
         case Listen:
             return settings.value("fListen");
         default:
@@ -338,10 +338,10 @@ bool OptionsModel::setData(const QModelIndex& index, const QVariant& value, int 
             settings.setValue("nObfuscationRounds", nObfuscationRounds);
             emit obfuscationRoundsChanged(nObfuscationRounds);
             break;
-        case AnonymizeMLMAmount:
-            nAnonymizeMLMAmount = value.toInt();
-            settings.setValue("nAnonymizeMLMAmount", nAnonymizeMLMAmount);
-            emit anonymizeMktcoinAmountChanged(nAnonymizeMLMAmount);
+        case AnonymizeMKTAmount:
+            nAnonymizeMKTAmount = value.toInt();
+            settings.setValue("nAnonymizeMKTAmount", nAnonymizeMKTAmount);
+            emit anonymizeMktcoinAmountChanged(nAnonymizeMKTAmount);
             break;
         case CoinControlFeatures:
             fCoinControlFeatures = value.toBool();

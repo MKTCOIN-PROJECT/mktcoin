@@ -176,16 +176,16 @@
         <translation>Confirm wallet encryption</translation>
     </message>
     <message>
-        <source>MktCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your MLMs from being stolen by malware infecting your computer.</source>
-        <translation>MktCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your MLMs from being stolen by malware infecting your computer.</translation>
+        <source>MktCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your MKTs from being stolen by malware infecting your computer.</source>
+        <translation>MktCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your MKTs from being stolen by malware infecting your computer.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Are you sure you wish to encrypt your wallet?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR MLM&lt;/b&gt;!</source>
-        <translation>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR MLM&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR MKT&lt;/b&gt;!</source>
+        <translation>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR MKT&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -1544,32 +1544,32 @@ Please check the address and try again.</translation>
         <translation>Please select a privacy level.</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 10000 MLM</source>
-        <translation>Use 2 separate masternodes to mix funds up to 10000 MLM</translation>
+        <source>Use 2 separate masternodes to mix funds up to 10000 MKT</source>
+        <translation>Use 2 separate masternodes to mix funds up to 10000 MKT</translation>
     </message>
     <message>
-        <source>Use 8 separate masternodes to mix funds up to 10000 MLM</source>
-        <translation>Use 8 separate masternodes to mix funds up to 10000 MLM</translation>
+        <source>Use 8 separate masternodes to mix funds up to 10000 MKT</source>
+        <translation>Use 8 separate masternodes to mix funds up to 10000 MKT</translation>
     </message>
     <message>
         <source>Use 16 separate masternodes</source>
         <translation>Use 16 separate masternodes</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 MLM to anonymize 10000 MLM</source>
-        <translation>This option is the quickest and will cost about ~0.025 MLM to anonymize 10000 MLM</translation>
+        <source>This option is the quickest and will cost about ~0.025 MKT to anonymize 10000 MKT</source>
+        <translation>This option is the quickest and will cost about ~0.025 MKT to anonymize 10000 MKT</translation>
     </message>
     <message>
-        <source>This option is moderately fast and will cost about 0.05 MLM to anonymize 10000 MLM</source>
-        <translation>This option is moderately fast and will cost about 0.05 MLM to anonymize 10000 MLM</translation>
+        <source>This option is moderately fast and will cost about 0.05 MKT to anonymize 10000 MKT</source>
+        <translation>This option is moderately fast and will cost about 0.05 MKT to anonymize 10000 MKT</translation>
     </message>
     <message>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
         <translation>This is the slowest and most secure option. Using maximum anonymity will cost</translation>
     </message>
     <message>
-        <source>0.1 MLM per 10000 MLM you anonymize.</source>
-        <translation>0.1 MLM per 10000 MLM you anonymize.</translation>
+        <source>0.1 MKT per 10000 MKT you anonymize.</source>
+        <translation>0.1 MKT per 10000 MKT you anonymize.</translation>
     </message>
     <message>
         <source>Obfuscation Configuration</source>
@@ -1923,8 +1923,8 @@ https://www.transifex.com/mktcoin/mktcoin-translations</translation>
         <translation>Obfuscation Balance:</translation>
     </message>
     <message>
-        <source>0 MLM / 0 Rounds</source>
-        <translation>0 MLM / 0 Rounds</translation>
+        <source>0 MKT / 0 Rounds</source>
+        <translation>0 MKT / 0 Rounds</translation>
     </message>
     <message>
         <source>Enabled/Disabled</source>
@@ -2788,8 +2788,8 @@ https://www.transifex.com/mktcoin/mktcoin-translations</translation>
         <translation>UTXO Size:</translation>
     </message>
     <message>
-        <source>0 MLM</source>
-        <translation>0 MLM</translation>
+        <source>0 MKT</source>
+        <translation>0 MKT</translation>
     </message>
     <message>
         <source>Transaction Fee:</source>
@@ -2836,12 +2836,12 @@ https://www.transifex.com/mktcoin/mktcoin-translations</translation>
         <translation>Confirmation time:</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 uMLMs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uMLMs in fee,&lt;br /&gt;while "at least" pays 1000 uMLMs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>If the custom fee is set to 1000 uMLMs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uMLMs in fee,&lt;br /&gt;while "at least" pays 1000 uMLMs. For transactions bigger than a kilobyte both pay by kilobyte.</translation>
+        <source>If the custom fee is set to 1000 uMKTs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uMKTs in fee,&lt;br /&gt;while "at least" pays 1000 uMKTs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>If the custom fee is set to 1000 uMKTs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uMKTs in fee,&lt;br /&gt;while "at least" pays 1000 uMKTs. For transactions bigger than a kilobyte both pay by kilobyte.</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 uMLMs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uMLMs in fee,&lt;br /&gt;while "total at least" pays 1000 uMLMs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>If the custom fee is set to 1000 uMLMs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uMLMs in fee,&lt;br /&gt;while "total at least" pays 1000 uMLMs. For transactions bigger than a kilobyte both pay by kilobyte.</translation>
+        <source>If the custom fee is set to 1000 uMKTs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uMKTs in fee,&lt;br /&gt;while "total at least" pays 1000 uMKTs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>If the custom fee is set to 1000 uMKTs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uMKTs in fee,&lt;br /&gt;while "total at least" pays 1000 uMKTs. For transactions bigger than a kilobyte both pay by kilobyte.</translation>
     </message>
     <message>
         <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for MktCoin transactions than the network can process.</source>
@@ -3836,8 +3836,8 @@ https://www.transifex.com/mktcoin/mktcoin-translations</translation>
         <translation>Send Coins</translation>
     </message>
     <message>
-        <source>SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 MLM.</source>
-        <translation>SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 MLM.</translation>
+        <source>SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 MKT.</source>
+        <translation>SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 MKT.</translation>
     </message>
 </context>
 <context>
@@ -3966,12 +3966,12 @@ https://www.transifex.com/mktcoin/mktcoin-translations</translation>
         <translation>Execute command when the best block changes (%s in cmd is replaced by block hash)</translation>
     </message>
     <message>
-        <source>Fees (in MLM/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
-        <translation>Fees (in MLM/Kb) smaller than this are considered zero fee for relaying (default: %s)</translation>
+        <source>Fees (in MKT/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
+        <translation>Fees (in MKT/Kb) smaller than this are considered zero fee for relaying (default: %s)</translation>
     </message>
     <message>
-        <source>Fees (in MLM/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
-        <translation>Fees (in MLM/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</translation>
+        <source>Fees (in MKT/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
+        <translation>Fees (in MKT/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</translation>
     </message>
     <message>
         <source>Flush database activity from memory pool to disk log every &lt;n&gt; megabytes (default: %u)</source>
@@ -4106,12 +4106,12 @@ for example: alertnotify=echo %%s | mail -s "MktCoin Alert" admin@foo.com
         <translation>Unable to locate enough Obfuscation denominated funds for this transaction.</translation>
     </message>
     <message>
-        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 MLM.</source>
-        <translation>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 MLM.</translation>
+        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 MKT.</source>
+        <translation>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 MKT.</translation>
     </message>
     <message>
-        <source>Unable to locate enough funds for this transaction that are not equal 10000 MLM.</source>
-        <translation>Unable to locate enough funds for this transaction that are not equal 10000 MLM.</translation>
+        <source>Unable to locate enough funds for this transaction that are not equal 10000 MKT.</source>
+        <translation>Unable to locate enough funds for this transaction that are not equal 10000 MKT.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: %s)</source>
@@ -4398,8 +4398,8 @@ for example: alertnotify=echo %%s | mail -s "MktCoin Alert" admin@foo.com
         <translation>Failed to read block</translation>
     </message>
     <message>
-        <source>Fee (in MLM/kB) to add to transactions you send (default: %s)</source>
-        <translation>Fee (in MLM/kB) to add to transactions you send (default: %s)</translation>
+        <source>Fee (in MKT/kB) to add to transactions you send (default: %s)</source>
+        <translation>Fee (in MKT/kB) to add to transactions you send (default: %s)</translation>
     </message>
     <message>
         <source>Finalizing transaction.</source>
@@ -4570,8 +4570,8 @@ for example: alertnotify=echo %%s | mail -s "MktCoin Alert" admin@foo.com
         <translation>Enable staking functionality (0-1, default: %u)</translation>
     </message>
     <message>
-        <source>Keep N MLM anonymized (default: %u)</source>
-        <translation>Keep N MLM anonymized (default: %u)</translation>
+        <source>Keep N MKT anonymized (default: %u)</source>
+        <translation>Keep N MKT anonymized (default: %u)</translation>
     </message>
     <message>
         <source>Keep at most &lt;n&gt; unconnectable transactions in memory (default: %u)</source>

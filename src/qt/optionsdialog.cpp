@@ -214,7 +214,7 @@ void OptionsDialog::setMapper()
     /* Obfuscation Rounds */
 /*
     mapper->addMapping(ui->obfuscationRounds, OptionsModel::ObfuscationRounds);
-    mapper->addMapping(ui->anonymizeMktcoin, OptionsModel::AnonymizeMLMAmount);
+    mapper->addMapping(ui->anonymizeMktcoin, OptionsModel::AnonymizeMKTAmount);
 */
     mapper->addMapping(ui->showMasternodesTab, OptionsModel::ShowMasternodesTab);
 }

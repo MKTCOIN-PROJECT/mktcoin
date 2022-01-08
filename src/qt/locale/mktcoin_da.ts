@@ -176,7 +176,7 @@
         <translation>Bekræft, og tegnebogen krypteres.</translation>
     </message>
     <message>
-        <source>MktCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your MLMs from being stolen by malware infecting your computer.</source>
+        <source>MktCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your MKTs from being stolen by malware infecting your computer.</source>
         <translation>MktCoin vil lukke ned for at færdiggøre kryptograferingsprocesserne. Husk at kryptering alene ikke sikrer mod tyveri af mønterne fra malware eller virus på computeren.</translation>
     </message>
     <message>
@@ -184,8 +184,8 @@
         <translation>Er du sikker på, at du vil kryptere din tegnebog?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR MLM&lt;/b&gt;!</source>
-        <translation>Advarsel! Hvis du krypterer din tegnebog og mister dit password vil du &lt;b&gt;MISTE ALLE DINE MLM&lt;/b&gt;. Passworded kan ikke genskabes.</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR MKT&lt;/b&gt;!</source>
+        <translation>Advarsel! Hvis du krypterer din tegnebog og mister dit password vil du &lt;b&gt;MISTE ALLE DINE MKT&lt;/b&gt;. Passworded kan ikke genskabes.</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -1520,32 +1520,32 @@ Kontroller adressen og prøv igen.</translation>
         <translation>Vælg tilsløringsniveau</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 10000 MLM</source>
-        <translation>Brug 2 separate masternoder for at tilsløre beløb op til 10000 MLM</translation>
+        <source>Use 2 separate masternodes to mix funds up to 10000 MKT</source>
+        <translation>Brug 2 separate masternoder for at tilsløre beløb op til 10000 MKT</translation>
     </message>
     <message>
-        <source>Use 8 separate masternodes to mix funds up to 10000 MLM</source>
-        <translation>Brug 8 separate masternoder for at tilsløre op til 10000 MLM</translation>
+        <source>Use 8 separate masternodes to mix funds up to 10000 MKT</source>
+        <translation>Brug 8 separate masternoder for at tilsløre op til 10000 MKT</translation>
     </message>
     <message>
         <source>Use 16 separate masternodes</source>
         <translation>Brug 16 separate masternoder</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 MLM to anonymize 10000 MLM</source>
-        <translation>Dette valg er det hurtigste og vil koste i omegnen af 0.025 MLM for at anonymiser 10000 MLM</translation>
+        <source>This option is the quickest and will cost about ~0.025 MKT to anonymize 10000 MKT</source>
+        <translation>Dette valg er det hurtigste og vil koste i omegnen af 0.025 MKT for at anonymiser 10000 MKT</translation>
     </message>
     <message>
-        <source>This option is moderately fast and will cost about 0.05 MLM to anonymize 10000 MLM</source>
-        <translation>Dette valg er relativt hurtigt og vil koste i omegnen af 0.05 MLM for at anonymiser 10000 MLM</translation>
+        <source>This option is moderately fast and will cost about 0.05 MKT to anonymize 10000 MKT</source>
+        <translation>Dette valg er relativt hurtigt og vil koste i omegnen af 0.05 MKT for at anonymiser 10000 MKT</translation>
     </message>
     <message>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
         <translation>Denne mulighed er den langsomste og det mest sikre valg. Valg af maksimal tilsløring vil koste</translation>
     </message>
     <message>
-        <source>0.1 MLM per 10000 MLM you anonymize.</source>
-        <translation>0.1 pr 10000 MLM for at tilsløre.</translation>
+        <source>0.1 MKT per 10000 MKT you anonymize.</source>
+        <translation>0.1 pr 10000 MKT for at tilsløre.</translation>
     </message>
     <message>
         <source>Obfuscation Configuration</source>
@@ -1899,8 +1899,8 @@ https://www.transifex.com/mktcoin/mktcoin-translations</translation>
         <translation>Sløret beløb</translation>
     </message>
     <message>
-        <source>0 MLM / 0 Rounds</source>
-        <translation>0 MLM / 0 gennemløb</translation>
+        <source>0 MKT / 0 Rounds</source>
+        <translation>0 MKT / 0 gennemløb</translation>
     </message>
     <message>
         <source>Enabled/Disabled</source>
@@ -2755,8 +2755,8 @@ https://www.transifex.com/mktcoin/mktcoin-translations</translation>
         <translation>UTXO størrelse:</translation>
     </message>
     <message>
-        <source>0 MLM</source>
-        <translation>0 MLM</translation>
+        <source>0 MKT</source>
+        <translation>0 MKT</translation>
     </message>
     <message>
         <source>Transaction Fee:</source>
@@ -2803,12 +2803,12 @@ https://www.transifex.com/mktcoin/mktcoin-translations</translation>
         <translation>Bekræftelsestid</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 uMLMs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uMLMs in fee,&lt;br /&gt;while "at least" pays 1000 uMLMs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>Hvis den brugerfastsatte gebyrbetaling er sat til 1000 uMLMs og transaktionen kun fylder 250 bytes, så vil "pr. kilobyte" kun udbetale 250 uMLM i gebyr, &lt;br /&gt; mens "mindst" udbetaler 1000 uMLMs. For transaktioner større end en kilobyte betales i begge tilfælde i forhold til antallet af kilobytes </translation>
+        <source>If the custom fee is set to 1000 uMKTs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uMKTs in fee,&lt;br /&gt;while "at least" pays 1000 uMKTs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>Hvis den brugerfastsatte gebyrbetaling er sat til 1000 uMKTs og transaktionen kun fylder 250 bytes, så vil "pr. kilobyte" kun udbetale 250 uMKT i gebyr, &lt;br /&gt; mens "mindst" udbetaler 1000 uMKTs. For transaktioner større end en kilobyte betales i begge tilfælde i forhold til antallet af kilobytes </translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 uMLMs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uMLMs in fee,&lt;br /&gt;while "total at least" pays 1000 uMLMs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>Hvis den brugerfastsatte gebyrbetaling er sat til 1000 uMLMs og transaktionen kun fylder 250 bytes, så vil "pr. kilobyte" kun udbetale 250 uMLM i gebyr, &lt;br /&gt; mens "Total-mindst" udbetaler 1000 uMLMs. For transaktioner større end en kilobyte betales i begge tilfælde i forhold til antallet af kilobytes </translation>
+        <source>If the custom fee is set to 1000 uMKTs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uMKTs in fee,&lt;br /&gt;while "total at least" pays 1000 uMKTs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>Hvis den brugerfastsatte gebyrbetaling er sat til 1000 uMKTs og transaktionen kun fylder 250 bytes, så vil "pr. kilobyte" kun udbetale 250 uMKT i gebyr, &lt;br /&gt; mens "Total-mindst" udbetaler 1000 uMKTs. For transaktioner større end en kilobyte betales i begge tilfælde i forhold til antallet af kilobytes </translation>
     </message>
     <message>
         <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for MktCoin transactions than the network can process.</source>
@@ -3787,8 +3787,8 @@ https://www.transifex.com/mktcoin/mktcoin-translations</translation>
         <translation>Send mønter</translation>
     </message>
     <message>
-        <source>SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 MLM.</source>
-        <translation>SwiftTx understøtter ikke afsendelse af så store beløb endnu. Transaktioner er for tiden begrænsede til %1 MLM.</translation>
+        <source>SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 MKT.</source>
+        <translation>SwiftTx understøtter ikke afsendelse af så store beløb endnu. Transaktioner er for tiden begrænsede til %1 MKT.</translation>
     </message>
 </context>
 <context>
@@ -3918,12 +3918,12 @@ https://www.transifex.com/mktcoin/mktcoin-translations</translation>
         <translation>Udfør en kommando når den bedste blok ændres (%s in cmd erstattes med blok hashen)</translation>
     </message>
     <message>
-        <source>Fees (in MLM/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
-        <translation>Gebyrer (in MLM/kb) lavere end dette betragtes som et nul-gebyr for at videresende (default: %s)</translation>
+        <source>Fees (in MKT/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
+        <translation>Gebyrer (in MKT/kb) lavere end dette betragtes som et nul-gebyr for at videresende (default: %s)</translation>
     </message>
     <message>
-        <source>Fees (in MLM/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
-        <translation>Gebyrer (in MLM/kb) lavere end dette betragtes som et nul-gebyr for at oprette en transaktion (default: %s)</translation>
+        <source>Fees (in MKT/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
+        <translation>Gebyrer (in MKT/kb) lavere end dette betragtes som et nul-gebyr for at oprette en transaktion (default: %s)</translation>
     </message>
     <message>
         <source>Flush database activity from memory pool to disk log every &lt;n&gt; megabytes (default: %u)</source>
@@ -3975,7 +3975,7 @@ https://www.transifex.com/mktcoin/mktcoin-translations</translation>
     </message>
     <message>
         <source>Obfuscation uses exact denominated amounts to send funds, you might simply need to anonymize some more coins.</source>
-        <translation>Tilsløring bruger hele det tilslørede designerede beløb til at sende betalinger. De kan blot tilsløre yderligere MLM</translation>
+        <translation>Tilsløring bruger hele det tilslørede designerede beløb til at sende betalinger. De kan blot tilsløre yderligere MKT</translation>
     </message>
     <message>
         <source>Output debugging information (default: %u, supplying &lt;category&gt; is optional)</source>
@@ -3983,7 +3983,7 @@ https://www.transifex.com/mktcoin/mktcoin-translations</translation>
     </message>
     <message>
         <source>Provide liquidity to Obfuscation by infrequently mixing coins on a continual basis (0-100, default: %u, 1=very frequent, high fees, 100=very infrequent, low fees)</source>
-        <translation>Tilfør tilsløring likviditet  ved at tilføje flere MLM løbende (0-100, default:%u, 1=meget hyppigt, høje gebyrer, 100=sjældent, lave gebyrer)</translation>
+        <translation>Tilfør tilsløring likviditet  ved at tilføje flere MKT løbende (0-100, default:%u, 1=meget hyppigt, høje gebyrer, 100=sjældent, lave gebyrer)</translation>
     </message>
     <message>
         <source>Query for peer addresses via DNS lookup, if low on addresses (default: 1 unless -connect)</source>
@@ -4058,12 +4058,12 @@ For eksempel: alertnotify=Echo %% | mail - s "MktCoin ALARM!" e-mail@administrat
         <translation>Det er ikke muligt at allokere tilstrækkeligt med tilsløret designeret indestående for at gennemføre denne transaktion.</translation>
     </message>
     <message>
-        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 MLM.</source>
-        <translation>Det er ikke muligt at allokere tilstrækkeligt med tilsløret  ikke-designeret indestående for at gennemføre denne transaktion, der ikke ækvivalerer 10000 MLM.</translation>
+        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 MKT.</source>
+        <translation>Det er ikke muligt at allokere tilstrækkeligt med tilsløret  ikke-designeret indestående for at gennemføre denne transaktion, der ikke ækvivalerer 10000 MKT.</translation>
     </message>
     <message>
-        <source>Unable to locate enough funds for this transaction that are not equal 10000 MLM.</source>
-        <translation>Det var ikke muligt at allokere tilstrækkelige midler til denne transaktion som er forskellig fra 10000 MLM.</translation>
+        <source>Unable to locate enough funds for this transaction that are not equal 10000 MKT.</source>
+        <translation>Det var ikke muligt at allokere tilstrækkelige midler til denne transaktion som er forskellig fra 10000 MKT.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: %s)</source>
@@ -4350,8 +4350,8 @@ For eksempel: alertnotify=Echo %% | mail - s "MktCoin ALARM!" e-mail@administrat
         <translation>Læsning af blokken mislykkedes</translation>
     </message>
     <message>
-        <source>Fee (in MLM/kB) to add to transactions you send (default: %s)</source>
-        <translation>Gebyr (i MLM/kB) som skal tilføjes transaktionen der sendes (default: %s)</translation>
+        <source>Fee (in MKT/kB) to add to transactions you send (default: %s)</source>
+        <translation>Gebyr (i MKT/kB) som skal tilføjes transaktionen der sendes (default: %s)</translation>
     </message>
     <message>
         <source>Finalizing transaction.</source>
@@ -4486,8 +4486,8 @@ For eksempel: alertnotify=Echo %% | mail - s "MktCoin ALARM!" e-mail@administrat
         <translation>Forsøg at gennemtvinge reparation af korrumperet blokkæde</translation>
     </message>
     <message>
-        <source>Keep N MLM anonymized (default: %u)</source>
-        <translation>Behold N MLM anonymiserede (default: %u)</translation>
+        <source>Keep N MKT anonymized (default: %u)</source>
+        <translation>Behold N MKT anonymiserede (default: %u)</translation>
     </message>
     <message>
         <source>Keep at most &lt;n&gt; unconnectable transactions in memory (default: %u)</source>

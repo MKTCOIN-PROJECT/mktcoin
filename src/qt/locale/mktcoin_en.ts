@@ -221,7 +221,7 @@
     </message>
     <message>
         <location line="+9"/>
-        <source>MktCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your MLMs from being stolen by malware infecting your computer.</source>
+        <source>MktCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your MKTs from being stolen by malware infecting your computer.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -231,7 +231,7 @@
     </message>
     <message>
         <location line="+0"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR MLM&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR MKT&lt;/b&gt;!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1948,12 +1948,12 @@ Please check the address and try again.</source>
     </message>
     <message>
         <location line="+13"/>
-        <source>Use 2 separate masternodes to mix funds up to 10000 MLM</source>
+        <source>Use 2 separate masternodes to mix funds up to 10000 MKT</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>Use 8 separate masternodes to mix funds up to 10000 MLM</source>
+        <source>Use 8 separate masternodes to mix funds up to 10000 MKT</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1963,12 +1963,12 @@ Please check the address and try again.</source>
     </message>
     <message>
         <location line="+13"/>
-        <source>This option is the quickest and will cost about ~0.025 MLM to anonymize 10000 MLM</source>
+        <source>This option is the quickest and will cost about ~0.025 MKT to anonymize 10000 MKT</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>This option is moderately fast and will cost about 0.05 MLM to anonymize 10000 MLM</source>
+        <source>This option is moderately fast and will cost about 0.05 MKT to anonymize 10000 MKT</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1978,7 +1978,7 @@ Please check the address and try again.</source>
     </message>
     <message>
         <location line="+13"/>
-        <source>0.1 MLM per 10000 MLM you anonymize.</source>
+        <source>0.1 MKT per 10000 MKT you anonymize.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2424,7 +2424,7 @@ https://www.transifex.com/mktcoin/mktcoin-translations</source>
     </message>
     <message>
         <location line="+27"/>
-        <source>0 MLM / 0 Rounds</source>
+        <source>0 MKT / 0 Rounds</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3565,7 +3565,7 @@ https://www.transifex.com/mktcoin/mktcoin-translations</source>
     </message>
     <message>
         <location line="+7"/>
-        <source>0 MLM</source>
+        <source>0 MKT</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3625,12 +3625,12 @@ https://www.transifex.com/mktcoin/mktcoin-translations</source>
     </message>
     <message>
         <location line="-165"/>
-        <source>If the custom fee is set to 1000 uMLMs and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 uMLMs in fee,&lt;br /&gt;while &quot;at least&quot; pays 1000 uMLMs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <source>If the custom fee is set to 1000 uMKTs and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 uMKTs in fee,&lt;br /&gt;while &quot;at least&quot; pays 1000 uMKTs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+16"/>
-        <source>If the custom fee is set to 1000 uMLMs and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 uMLMs in fee,&lt;br /&gt;while &quot;total at least&quot; pays 1000 uMLMs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <source>If the custom fee is set to 1000 uMKTs and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 uMKTs in fee,&lt;br /&gt;while &quot;total at least&quot; pays 1000 uMKTs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4930,7 +4930,7 @@ https://www.transifex.com/mktcoin/mktcoin-translations</source>
     <message>
         <location line="-18"/>
         <location line="+9"/>
-        <source>SwiftTX doesn&apos;t support sending values that high yet. Transactions are currently limited to %1 MLM.</source>
+        <source>SwiftTX doesn&apos;t support sending values that high yet. Transactions are currently limited to %1 MKT.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -5091,12 +5091,12 @@ https://www.transifex.com/mktcoin/mktcoin-translations</source>
     </message>
     <message>
         <location line="+3"/>
-        <source>Fees (in MLM/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
+        <source>Fees (in MKT/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Fees (in MLM/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
+        <source>Fees (in MKT/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5251,12 +5251,12 @@ for example: alertnotify=echo %%s | mail -s &quot;MktCoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+2"/>
-        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 MLM.</source>
+        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 MKT.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Unable to locate enough funds for this transaction that are not equal 10000 MLM.</source>
+        <source>Unable to locate enough funds for this transaction that are not equal 10000 MKT.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5616,7 +5616,7 @@ for example: alertnotify=echo %%s | mail -s &quot;MktCoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+1"/>
-        <source>Fee (in MLM/kB) to add to transactions you send (default: %s)</source>
+        <source>Fee (in MKT/kB) to add to transactions you send (default: %s)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5831,7 +5831,7 @@ for example: alertnotify=echo %%s | mail -s &quot;MktCoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+53"/>
-        <source>Keep N MLM anonymized (default: %u)</source>
+        <source>Keep N MKT anonymized (default: %u)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

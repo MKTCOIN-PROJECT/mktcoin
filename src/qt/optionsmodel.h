@@ -44,7 +44,7 @@ public:
         DatabaseCache,       // int
         SpendZeroConfChange, // bool
         ObfuscationRounds,   // int
-        AnonymizeMLMAmount,  //int
+        AnonymizeMKTAmount,  //int
         ShowMasternodesTab,  // bool
         Listen,              // bool
         OptionIDRowCount,
