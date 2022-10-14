@@ -17,7 +17,7 @@
   <string>APPL</string>
 
   <key>CFBundleGetInfoString</key>
-  <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@.@CLIENT_VERSION_REVISION@, Copyright © 2009-@COPYRIGHT_YEAR@ The Bitcoin Core developers, 2014-@COPYRIGHT_YEAR@ The Dash Core developers, 2015-@COPYRIGHT_YEAR@ The Pivx Core developers, 2018-@COPYRIGHT_YEAR@ The MktCoin Core developers</string>
+  <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@.@CLIENT_VERSION_REVISION@, Copyright © 2009-@COPYRIGHT_YEAR@ @COPYRIGHT_HOLDERS_FINAL@</string>
 
   <key>CFBundleShortVersionString</key>
   <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@.@CLIENT_VERSION_REVISION@</string>
@@ -29,10 +29,16 @@
   <string>????</string>
 
   <key>CFBundleExecutable</key>
-  <string>MktCoin-Qt</string>
+  <string>Marketcoin-Qt</string>
+  
+  <key>CFBundleName</key>
+  <string>Marketcoin-Qt</string>
+
+  <key>LSHasLocalizedDisplayName</key>
+  <true/>
 
   <key>CFBundleIdentifier</key>
-  <string>io.mktcoin.MktCoin-Qt</string>
+  <string>org.Marketcoin.Marketcoin-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -40,10 +46,10 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>io.mktcoin.MktCoinPayment</string>
+      <string>org.bitcoin.BitcoinPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
-        <string>mktcoin</string>
+        <string>bitcoin</string>
       </array>
     </dict>
   </array>
@@ -52,9 +58,9 @@
   <array>
     <dict>
       <key>UTTypeIdentifier</key>
-      <string>io.mktcoin.paymentrequest</string>
+      <string>org.bitcoin.paymentrequest</string>
       <key>UTTypeDescription</key>
-      <string>MktCoin payment request</string>
+      <string>Bitcoin payment request</string>
       <key>UTTypeConformsTo</key>
       <array>
         <string>public.data</string>
@@ -62,10 +68,10 @@
       <key>UTTypeTagSpecification</key>
       <dict>
         <key>public.mime-type</key>
-        <string>application/x-mktcoin-payment-request</string>
+        <string>application/x-bitcoin-payment-request</string>
         <key>public.filename-extension</key>
         <array>
-          <string>mktcoinpaymentrequest</string>
+          <string>bitcoinpaymentrequest</string>
         </array>
       </dict>
     </dict>
@@ -78,7 +84,7 @@
       <string>Editor</string>
       <key>LSItemContentTypes</key>
       <array>
-        <string>io.mktcoin.paymentrequest</string>
+        <string>org.bitcoin.paymentrequest</string>
       </array>
       <key>LSHandlerRank</key>
       <string>Owner</string>
@@ -93,7 +99,7 @@
 
   <key>LSAppNapIsDisabled</key>
     <string>True</string>
-
+  
   <key>LSApplicationCategoryType</key>
     <string>public.app-category.finance</string>
 </dict>

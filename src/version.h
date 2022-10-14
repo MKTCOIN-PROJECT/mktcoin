@@ -1,7 +1,4 @@
-// Copyright (c) 2012-2014 The Bitcoin developers
-// Copyright (c) 2014-2015 The Dash developers
-// Copyright (c) 2015-2018 The PIVX developers
-// Copyright (c) 2019 The MktCoin developers
+// Copyright (c) 2012-2014 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -12,25 +9,24 @@
  * network protocol versioning
  */
 
-static const int PROTOCOL_VERSION = 70810;
+static const int PROTOCOL_VERSION = 70013;
 
 //! initial proto version, to be increased after version/verack negotiation
 static const int INIT_PROTO_VERSION = 209;
 
 //! In this version, 'getheaders' was introduced.
-static const int GETHEADERS_VERSION = 70077;
+static const int GETHEADERS_VERSION = 31800;
+
+//! reject blocks with non-canonical signatures starting from this version
+static const int CANONICAL_BLOCK_SIG_VERSION = 60016;
+static const int CANONICAL_BLOCK_SIG_LOW_S_VERSION = 60018;
 
 //! disconnect from peers older than this proto version
-static const int MIN_PEER_PROTO_VERSION_BEFORE_ENFORCEMENT = 70016;
-static const int MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT = 70810;
+static const int MIN_PEER_PROTO_VERSION = CANONICAL_BLOCK_SIG_VERSION;
 
 //! nTime field added to CAddress, starting with this version;
 //! if possible, avoid requesting addresses nodes older than this
 static const int CADDR_TIME_VERSION = 31402;
-
-//! only request blocks from nodes outside this range of versions
-static const int NOBLKS_VERSION_START = 32000;
-static const int NOBLKS_VERSION_END = 70909;
 
 //! BIP 0031, pong message, is enabled for all versions AFTER this one
 static const int BIP0031_VERSION = 60000;
@@ -39,7 +35,21 @@ static const int BIP0031_VERSION = 60000;
 static const int MEMPOOL_GD_VERSION = 60002;
 
 //! "filter*" commands are disabled without NODE_BLOOM after and including this version
-static const int NO_BLOOM_VERSION = 70005;
+static const int NO_BLOOM_VERSION = 70011;
 
+//! "sendheaders" command and announcing blocks with headers starts with this version
+static const int SENDHEADERS_VERSION = 70012;
+
+//! "feefilter" tells peers to filter invs to you by fee starts with this version
+static const int FEEFILTER_VERSION = 70013;
+
+/*
+// Disable BIP152
+//! shord-id-based block download starts with this version
+static const int SHORT_IDS_BLOCKS_VERSION = 70014;
+
+//! not banning for invalid compact blocks starts with this version
+static const int INVALID_CB_NO_BAN_VERSION = 70015;
+*/
 
 #endif // BITCOIN_VERSION_H

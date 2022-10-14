@@ -1,5 +1,5 @@
-// Copyright (c) 2011-2013 The Bitcoin developers
-// Distributed under the MIT/X11 software license, see the accompanying
+// Copyright (c) 2011-2014 The Bitcoin Core developers
+// Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #ifndef BITCOIN_QT_TRANSACTIONRECORD_H
@@ -19,24 +19,32 @@ class CWalletTx;
 class TransactionStatus
 {
 public:
-    TransactionStatus() : countsForBalance(false), sortKey(""),
-                          matures_in(0), status(Offline), depth(0), open_for(0), cur_num_blocks(-1)
+    TransactionStatus():
+        countsForBalance(false),
+        sortKey(""),
+        matures_in(0),
+        status(Offline),
+        depth(0),
+        open_for(0),
+        cur_num_blocks(-1),
+        cur_num_conflicts(-1)
     {
     }
 
     enum Status {
-        Confirmed, /**< Have 6 or more confirmations (normal tx) or fully mature (mined tx) **/
+        Confirmed,          /**< Have 6 or more confirmations (normal tx) or fully mature (mined tx) **/
         /// Normal (sent/received) transactions
-        OpenUntilDate,  /**< Transaction not yet final, waiting for date */
-        OpenUntilBlock, /**< Transaction not yet final, waiting for block */
-        Offline,        /**< Not sent to any other nodes **/
-        Unconfirmed,    /**< Not yet mined into a block **/
-        Confirming,     /**< Confirmed, but waiting for the recommended number of confirmations **/
-        Conflicted,     /**< Conflicts with other transaction or mempool **/
+        OpenUntilDate,      /**< Transaction not yet final, waiting for date */
+        OpenUntilBlock,     /**< Transaction not yet final, waiting for block */
+        Offline,            /**< Not sent to any other nodes **/
+        Unconfirmed,        /**< Not yet mined into a block **/
+        Confirming,         /**< Confirmed, but waiting for the recommended number of confirmations **/
+        Conflicted,         /**< Conflicts with other transaction or mempool **/
+        Abandoned,          /**< Abandoned from the wallet **/
         /// Generated (mined) transactions
-        Immature,       /**< Mined but waiting for maturity */
-        MaturesWarning, /**< Transaction will likely not mature because no nodes have confirmed */
-        NotAccepted     /**< Mined but not accepted */
+        Immature,           /**< Mined but waiting for maturity */
+        MaturesWarning,     /**< Transaction will likely not mature because no nodes have confirmed */
+        NotAccepted         /**< Mined but not accepted */
     };
 
     /// Transaction counts towards available balance
@@ -61,8 +69,8 @@ public:
     /** Current number of blocks (to know whether cached status is still valid) */
     int cur_num_blocks;
 
-    //** Know when to update transaction for ix locks **/
-    int cur_num_ix_locks;
+    /** Number of conflicts received into wallet as of last status update */
+    int64_t cur_num_conflicts;
 };
 
 /** UI model for a transaction. A core transaction can be represented by multiple UI transactions if it has
@@ -71,45 +79,43 @@ public:
 class TransactionRecord
 {
 public:
-    enum Type {
+    enum Type
+    {
         Other,
         Generated,
-        StakeMint,
         SendToAddress,
         SendToOther,
         RecvWithAddress,
-        MNReward,
         RecvFromOther,
-        SendToSelf,
-        RecvWithObfuscation,
-        ObfuscationDenominate,
-        ObfuscationCollateralPayment,
-        ObfuscationMakeCollaterals,
-        ObfuscationCreateDenominations,
-        Obfuscated
+        SendToSelf
     };
 
     /** Number of confirmation recommended for accepting a transaction */
     static const int RecommendedNumConfirmations = 6;
 
-    TransactionRecord() : hash(), time(0), type(Other), address(""), debit(0), credit(0), idx(0)
+    TransactionRecord():
+            hash(), time(0), type(Other), address(""), debit(0), credit(0), idx(0)
     {
     }
 
-    TransactionRecord(uint256 hash, qint64 time) : hash(hash), time(time), type(Other), address(""), debit(0),
-                                                   credit(0), idx(0)
+    TransactionRecord(uint256 hash, qint64 time):
+            hash(hash), time(time), type(Other), address(""), debit(0),
+            credit(0), idx(0)
     {
     }
 
-    TransactionRecord(uint256 hash, qint64 time, Type type, const std::string& address, const CAmount& debit, const CAmount& credit) : hash(hash), time(time), type(type), address(address), debit(debit), credit(credit),
-                                                                                                                                       idx(0)
+    TransactionRecord(uint256 hash, qint64 time,
+                Type type, const std::string &address,
+                const CAmount& debit, const CAmount& credit):
+            hash(hash), time(time), type(type), address(address), debit(debit), credit(credit),
+            idx(0)
     {
     }
 
     /** Decompose CWallet transaction to model transaction records.
      */
-    static bool showTransaction(const CWalletTx& wtx);
-    static QList<TransactionRecord> decomposeTransaction(const CWallet* wallet, const CWalletTx& wtx);
+    static bool showTransaction(const CWalletTx &wtx);
+    static QList<TransactionRecord> decomposeTransaction(const CWallet *wallet, const CWalletTx &wtx);
 
     /** @name Immutable transaction attributes
       @{*/
@@ -138,11 +144,11 @@ public:
 
     /** Update status from core wallet tx.
      */
-    void updateStatus(const CWalletTx& wtx);
+    void updateStatus(const CWalletTx &wtx);
 
     /** Return whether a status update is needed.
      */
-    bool statusUpdateNeeded();
+    bool statusUpdateNeeded(int64_t nConflictsReceived);
 };
 
 #endif // BITCOIN_QT_TRANSACTIONRECORD_H

@@ -1,8 +1,5 @@
-// Copyright (c) 2011-2014 The Bitcoin developers
-// Copyright (c) 2014-2015 The Dash developers
-// Copyright (c) 2015-2018 The PIVX developers
-// Copyright (c) 2019 The MktCoin developers
-// Distributed under the MIT/X11 software license, see the accompanying
+// Copyright (c) 2011-2015 The Bitcoin Core developers
+// Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #ifndef BITCOIN_QT_GUICONSTANTS_H
@@ -14,7 +11,7 @@ static const int MODEL_UPDATE_DELAY = 250;
 /* AskPassphraseDialog -- Maximum passphrase length */
 static const int MAX_PASSPHRASE_SIZE = 1024;
 
-/* MktCoin GUI -- Size of icons in status bar */
+/* BitcoinGUI -- Size of icons in status bar */
 static const int STATUSBAR_ICONSIZE = 16;
 
 static const bool DEFAULT_SPLASHSCREEN = true;
@@ -32,8 +29,10 @@ static const bool DEFAULT_SPLASHSCREEN = true;
 #define COLOR_TX_STATUS_OPENUNTILDATE QColor(64, 64, 255)
 /* Transaction list -- TX status decoration - offline */
 #define COLOR_TX_STATUS_OFFLINE QColor(192, 192, 192)
+/* Transaction list -- TX status decoration - danger, tx needs attention */
+#define COLOR_TX_STATUS_DANGER QColor(200, 100, 100)
 /* Transaction list -- TX status decoration - default color */
-#define COLOR_BLACK QColor(51, 51, 51)
+#define COLOR_BLACK QColor(0, 0, 0)
 
 /* Tooltips longer than this (in characters) are converted into rich text,
    so that they can be word-wrapped.
@@ -44,14 +43,14 @@ static const int TOOLTIP_WRAP_THRESHOLD = 80;
 static const int MAX_URI_LENGTH = 255;
 
 /* QRCodeDialog -- size of exported QR Code image */
-#define EXPORT_IMAGE_SIZE 256
+#define QR_IMAGE_SIZE 350
 
 /* Number of frames in spinner animation */
-#define SPINNER_FRAMES 35
+#define SPINNER_FRAMES 36
 
-#define QAPP_ORG_NAME "MktCoin"
-#define QAPP_ORG_DOMAIN "mktcoin.org"
-#define QAPP_APP_NAME_DEFAULT "MktCoin-Qt"
-#define QAPP_APP_NAME_TESTNET "MktCoin-Qt-testnet"
+#define QAPP_ORG_NAME "Marketcoin"
+#define QAPP_ORG_DOMAIN "Marketcoinmore.org"
+#define QAPP_APP_NAME_DEFAULT "Marketcoin-Qt"
+#define QAPP_APP_NAME_TESTNET "Marketcoin-Qt-testnet"
 
 #endif // BITCOIN_QT_GUICONSTANTS_H

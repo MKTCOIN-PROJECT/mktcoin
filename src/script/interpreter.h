@@ -1,5 +1,5 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2014 The Bitcoin developers
+// Copyright (c) 2009-2016 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -68,11 +68,48 @@ enum
     // discouraged NOPs fails the script. This verification flag will never be
     // a mandatory flag applied to scripts in a block. NOPs that are not
     // executed, e.g.  within an unexecuted IF ENDIF block, are *not* rejected.
-    SCRIPT_VERIFY_DISCOURAGE_UPGRADABLE_NOPS  = (1U << 7)
+    SCRIPT_VERIFY_DISCOURAGE_UPGRADABLE_NOPS  = (1U << 7),
 
+    // Require that only a single stack element remains after evaluation. This changes the success criterion from
+    // "At least one stack element must remain, and when interpreted as a boolean, it must be true" to
+    // "Exactly one stack element must remain, and when interpreted as a boolean, it must be true".
+    // (softfork safe, BIP62 rule 6)
+    // Note: CLEANSTACK should never be used without P2SH.
+    SCRIPT_VERIFY_CLEANSTACK = (1U << 8),
+
+    // Verify CHECKLOCKTIMEVERIFY
+    //
+    // See BIP65 for details.
+    SCRIPT_VERIFY_CHECKLOCKTIMEVERIFY = (1U << 9),
+
+    // Evaluating a pubkey that is not (0x04 + 64 bytes) or (0x02 or 0x03 + 32 bytes) by checksig causes script failure.
+    // (softfork safe)
+    SCRIPT_VERIFY_DERKEY = (1U << 10),
+
+    // support CHECKSEQUENCEVERIFY opcode
+    //
+    // See BIP112 for details
+    SCRIPT_VERIFY_CHECKSEQUENCEVERIFY = (1U << 10),
+
+    // Require the argument of OP_IF/NOTIF to be exactly 0x01 or empty vector
+    //
+    SCRIPT_VERIFY_MINIMALIF = (1U << 13),
+
+    // Signature(s) must be empty vector if an CHECK(MULTI)SIG operation failed
+    //
+    SCRIPT_VERIFY_NULLFAIL = (1U << 14),
 };
 
-uint256 SignatureHash(const CScript &scriptCode, const CTransaction& txTo, unsigned int nIn, int nHashType);
+bool CheckSignatureEncoding(const std::vector<unsigned char> &vchSig, unsigned int flags, ScriptError* serror);
+
+struct PrecomputedTransactionData
+{
+    uint256 hashPrevouts, hashSequence, hashOutputs;
+
+    PrecomputedTransactionData(const CTransaction& tx);
+};
+
+uint256 SignatureHash(const CScript &scriptCode, const CTransaction& txTo, unsigned int nIn, int nHashType, const CAmount& amount, const PrecomputedTransactionData* cache = NULL);
 
 class BaseSignatureChecker
 {
@@ -80,6 +117,16 @@ public:
     virtual bool CheckSig(const std::vector<unsigned char>& scriptSig, const std::vector<unsigned char>& vchPubKey, const CScript& scriptCode) const
     {
         return false;
+    }
+
+    virtual bool CheckLockTime(const CScriptNum& nLockTime) const
+    {
+         return false;
+    }
+
+    virtual bool CheckSequence(const CScriptNum& nSequence) const
+    {
+         return false;
     }
 
     virtual ~BaseSignatureChecker() {}
@@ -90,13 +137,18 @@ class TransactionSignatureChecker : public BaseSignatureChecker
 private:
     const CTransaction* txTo;
     unsigned int nIn;
+    const CAmount amount;
+    const PrecomputedTransactionData* txdata;
 
 protected:
     virtual bool VerifySignature(const std::vector<unsigned char>& vchSig, const CPubKey& vchPubKey, const uint256& sighash) const;
 
 public:
-    TransactionSignatureChecker(const CTransaction* txToIn, unsigned int nInIn) : txTo(txToIn), nIn(nInIn) {}
+    TransactionSignatureChecker(const CTransaction* txToIn, unsigned int nInIn, const CAmount& amountIn) : txTo(txToIn), nIn(nInIn), amount(amountIn), txdata(NULL) {}
+    TransactionSignatureChecker(const CTransaction* txToIn, unsigned int nInIn, const CAmount& amountIn, const PrecomputedTransactionData& txdataIn) : txTo(txToIn), nIn(nInIn), amount(amountIn), txdata(&txdataIn) {}
     bool CheckSig(const std::vector<unsigned char>& scriptSig, const std::vector<unsigned char>& vchPubKey, const CScript& scriptCode) const;
+    bool CheckLockTime(const CScriptNum& nLockTime) const;
+    bool CheckSequence(const CScriptNum& nSequence) const;
 };
 
 class MutableTransactionSignatureChecker : public TransactionSignatureChecker
@@ -105,8 +157,12 @@ private:
     const CTransaction txTo;
 
 public:
-    MutableTransactionSignatureChecker(const CMutableTransaction* txToIn, unsigned int nInIn) : TransactionSignatureChecker(&txTo, nInIn), txTo(*txToIn) {}
+    MutableTransactionSignatureChecker(const CMutableTransaction* txToIn, unsigned int nInIn, const CAmount& amount) : TransactionSignatureChecker(&txTo, nInIn, amount), txTo(*txToIn) {}
 };
+
+bool IsCompressedOrUncompressedPubKey(const std::vector<unsigned char> &vchPubKey);
+bool IsLowDERSignature(const std::vector<unsigned char> &vchSig, ScriptError* serror, bool haveHashType = true);
+bool IsDERSignature(const std::vector<unsigned char> &vchSig, ScriptError* serror, bool haveHashType = true);
 
 bool EvalScript(std::vector<std::vector<unsigned char> >& stack, const CScript& script, unsigned int flags, const BaseSignatureChecker& checker, ScriptError* error = NULL);
 bool VerifyScript(const CScript& scriptSig, const CScript& scriptPubKey, unsigned int flags, const BaseSignatureChecker& checker, ScriptError* error = NULL);

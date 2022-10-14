@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python
 # Copyright (c) 2014 Wladimir J. van der Laan
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -26,7 +26,7 @@ import xml.etree.ElementTree as ET
 # Name of transifex tool
 TX = 'tx'
 # Name of source language file
-SOURCE_LANG = 'mktcoin_en.ts'
+SOURCE_LANG = 'bitcoin_en.ts'
 # Directory with locale files
 LOCALE_DIR = 'src/qt/locale'
 # Minimum number of messages for translation to be considered at all
@@ -51,10 +51,7 @@ def find_format_specifiers(s):
         percent = s.find('%', pos)
         if percent < 0:
             break
-        try:
-            specifiers.append(s[percent+1])
-        except:
-            print('Failed to get specifier')
+        specifiers.append(s[percent+1])
         pos = percent+2
     return specifiers
 
@@ -67,14 +64,6 @@ def split_format_specifiers(specifiers):
             numeric.append(s)
         else:
             other.append(s)
-
-    # If both numeric format specifiers and "others" are used, assume we're dealing
-    # with a Qt-formatted message. In the case of Qt formatting (see https://doc.qt.io/qt-5/qstring.html#arg)
-    # only numeric formats are replaced at all. This means "(percentage: %1%)" is valid, without needing
-    # any kind of escaping that would be necessary for strprintf. Without this, this function
-    # would wrongly detect '%)' as a printf format specifier.
-    if numeric:
-        other = []
 
     # numeric (Qt) can be present in any order, others (strprintf) must be in specified order
     return set(numeric),other
@@ -208,3 +197,4 @@ if __name__ == '__main__':
     check_at_repository_root()
     fetch_all_translations()
     postprocess_translations()
+

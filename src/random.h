@@ -1,6 +1,6 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2014 The Bitcoin developers
-// Distributed under the MIT/X11 software license, see the accompanying
+// Copyright (c) 2009-2014 The Bitcoin Core developers
+// Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #ifndef BITCOIN_RANDOM_H
@@ -10,11 +10,8 @@
 
 #include <stdint.h>
 
-/**
- * Seed OpenSSL PRNG with additional entropy data
- */
+/* Seed OpenSSL PRNG with additional entropy data */
 void RandAddSeed();
-void RandAddSeedPerfmon();
 
 /**
  * Functions to gather random data via the OpenSSL PRNG
@@ -25,10 +22,77 @@ int GetRandInt(int nMax);
 uint256 GetRandHash();
 
 /**
+ * Function to gather random data from multiple sources, failing whenever any
+ * of those source fail to provide a result.
+ */
+void GetStrongRandBytes(unsigned char* buf, int num);
+
+/**
  * Seed insecure_rand using the random pool.
  * @param Deterministic Use a deterministic seed
  */
 void seed_insecure_rand(bool fDeterministic = false);
+
+/**
+ * Fast randomness source. This is seeded once with secure random data, but
+ * is completely deterministic and insecure after that.
+ * This class is not thread-safe.
+ */
+class FastRandomContext
+{
+private:
+    uint64_t bitbuf;
+    int bitbuf_size;
+
+    void FillBitBuffer()
+    {
+        bitbuf = rand64();
+        bitbuf_size = 64;
+    }
+
+public:
+    explicit FastRandomContext(bool fDeterministic = false);
+
+    uint32_t Rz;
+    uint32_t Rw;
+
+    uint32_t rand32()
+    {
+        Rz = 36969 * (Rz & 65535) + (Rz >> 16);
+        Rw = 18000 * (Rw & 65535) + (Rw >> 16);
+        return (Rw << 16) + Rz;
+    }
+
+    uint64_t rand64()
+    {
+        uint64_t a = rand32();
+        uint64_t b = rand32();
+        return (b << 32) + a;
+    }
+
+    bool randbool() { return rand32() & 1; }
+    uint64_t randbits(int bits)
+    {
+        if (bits == 0)
+        {
+            return 0;
+        }
+        else if (bits > 32)
+        {
+            return rand64() >> (64 - bits);
+        }
+        else
+        {
+            if (bitbuf_size < bits)
+                FillBitBuffer();
+
+            uint64_t ret = bitbuf & (~uint64_t(0) >> (64 - bits));
+            bitbuf >>= bits;
+            bitbuf_size -= bits;
+            return ret;
+        }
+    }
+};
 
 /**
  * MWC RNG of George Marsaglia
