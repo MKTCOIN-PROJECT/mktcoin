@@ -17,8 +17,6 @@ The Marketcoin is a hybrid PoW/PoS based cryptocurrency
 	  *  Max. stake age   Unlimited
 * Target spacing    2 minutes
 * Target timespan   10 minutes
- 
-#### [Linux Build Instructions](https://github.com/marketcoin/marketcoin/wiki/How-To#build-marketcoin) Other guides refer to [Doc](https://github.com/MKTCOIN-PROJECT/mktcoin/tree/master/doc)
 
 
 
