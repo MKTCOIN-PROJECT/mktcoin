@@ -18,7 +18,7 @@ The Marketcoin is a hybrid PoW/PoS based cryptocurrency
 * Target spacing    2 minutes
 * Target timespan   10 minutes
  
-#### [Linux Build Instructions](https://github.com/marketcoin/marketcoin/wiki/How-To#build-marketcoin) Other guides refer to [Doc](https://github.com/marketcoin/marketcoin/tree/master/doc) and [Wiki](https://github.com/marketcoin/marketcoin/wiki) 
+#### [Linux Build Instructions](https://github.com/marketcoin/marketcoin/wiki/How-To#build-marketcoin) Other guides refer to [Doc](https://github.com/MKTCOIN-PROJECT/mktcoin/tree/master/doc)
 
-#### Visit our Website [marketcoin.org](http://marketcoin.org/) Join us on [Telegram](https://t.me/marketcoin) and [Discord](https://discord.gg/zmGr38eJYE) or find us on [Twitter](https://twitter.com/marketcoin) and [facebook](https://www.facebook.com/profile.php?id=100076115306177)
+
 
