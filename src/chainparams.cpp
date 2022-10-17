@@ -79,7 +79,7 @@ public:
 
         consensus.nProtocolV1RetargetingFixedTime = 1666005517;
         consensus.nProtocolV2Time = 1666005518;
-        consensus.nProtocolV3Time = 16660055179;
+        consensus.nProtocolV3Time = 1666005519;
         consensus.nLastPOWBlock = 10000;
         consensus.nStakeTimestampMask = 0xf;
         consensus.nCoinbaseMaturity = 5;
@@ -94,7 +94,7 @@ public:
         nDefaultPort = 19552;
         nPruneAfterHeight = 100000;
 
-        genesis = CreateGenesisBlock(1666005517, 348316, 0x1e0ffff0, 1, 0);
+        genesis = CreateGenesisBlock(1666005517, 174082, 0x1e0ffff0, 1, 0);
         consensus.hashGenesisBlock = genesis.GetHash();
 
         assert(consensus.hashGenesisBlock == uint256S("0x000000b4079fa10a374d758244f104a3d6ffda19c650197522c3676325c7eb48"));
