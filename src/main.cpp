@@ -1786,7 +1786,7 @@ CAmount GetProofOfWorkSubsidy()
 {
     int nBlockHeight = chainActive.Height() + 1;
 
-    if (nBlockHeight == 1) { return 1650000000 * COIN; }
+    if (nBlockHeight == 1) { return 1850000000 * COIN; }
     if (nBlockHeight >= 2) { return 25 * COIN; }
 }
 
@@ -1795,19 +1795,19 @@ CAmount GetProofOfWorkSubsidy()
 CAmount GetProofOfStakeSubsidy()
 {
     int nBlockHeight = chainActive.Height() + 1;
-    
+
     if (nBlockHeight <= 10000) {
         return 225 * COIN;
-    } else if (nBlockHeight <= 1051200) {
+    } else if (nBlockHeight <= 525600) {
         return 200 * COIN;
+    } else if (nBlockHeight <= 1051200) {
+        return 100 * COIN;
+    } else if (nBlockHeight <= 1576800) {
+        return 50 * COIN;
     } else if (nBlockHeight <= 2102400) {
-        return 100 * COIN; 
-    } else if (nBlockHeight <= 3153600) { 
-        return 50 * COIN; 
-    } else if (nBlockHeight <= 4204800) { 
-        return 25 * COIN; 
-    } else { 
-        return 10 * COIN; 
+        return 25 * COIN;
+    } else {
+        return 10 * COIN;
     }
 }
 
