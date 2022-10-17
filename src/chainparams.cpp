@@ -77,9 +77,9 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = 1199145601; // January 1, 2008
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = 1230767999; // December 31, 2008
 
-        consensus.nProtocolV1RetargetingFixedTime = 1665740480;
-        consensus.nProtocolV2Time = 1665740481;
-        consensus.nProtocolV3Time = 1665740482;
+        consensus.nProtocolV1RetargetingFixedTime = 1666005517;
+        consensus.nProtocolV2Time = 1666005518;
+        consensus.nProtocolV3Time = 16660055179;
         consensus.nLastPOWBlock = 10000;
         consensus.nStakeTimestampMask = 0xf;
         consensus.nCoinbaseMaturity = 5;
@@ -94,14 +94,14 @@ public:
         nDefaultPort = 19552;
         nPruneAfterHeight = 100000;
 
-        genesis = CreateGenesisBlock(1665740480, 348316, 0x1e0ffff0, 1, 0);
+        genesis = CreateGenesisBlock(1666005517, 348316, 0x1e0ffff0, 1, 0);
         consensus.hashGenesisBlock = genesis.GetHash();
 
-        assert(consensus.hashGenesisBlock == uint256S("0x000009823d6eebedbc9ff43133473eb2fef9940d21ba4d0cbf75fda534ce7c13"));
-        assert(genesis.hashMerkleRoot == uint256S("0x210fa4eec89aa4b79eaeac9ebc22f1e3aac6cb88ebbb4f27bd5947a8245faf80"));
+        assert(consensus.hashGenesisBlock == uint256S("0x000000b4079fa10a374d758244f104a3d6ffda19c650197522c3676325c7eb48"));
+        assert(genesis.hashMerkleRoot == uint256S("0x9e0d557f6d704ee35868bdbc92497b41debf3aaf809bd39c5ccc142dea748847"));
 
-	    vSeeds.push_back(CDNSSeedData("vps-565c969f.vps.ovh.net", "vps-565c969f.vps.ovh.net",true));
-	    vSeeds.push_back(CDNSSeedData("vps-1254e315.vps.ovh.ca", "vps-1254e315.vps.ovh.ca",true));
+        vSeeds.push_back(CDNSSeedData("vps-565c969f.vps.ovh.net", "vps-565c969f.vps.ovh.net",true));
+        vSeeds.push_back(CDNSSeedData("vps-1254e315.vps.ovh.ca", "vps-1254e315.vps.ovh.ca",true));
         vSeeds.push_back(CDNSSeedData("vps-11e7cba6.vps.ovh.net", "vps-11e7cba6.vps.ovh.net",true));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,51); // M
@@ -121,8 +121,8 @@ public:
 
         checkpointData = (CCheckpointData) {
                     boost::assign::map_list_of
-                    (0, uint256S("0x000009823d6eebedbc9ff43133473eb2fef9940d21ba4d0cbf75fda534ce7c13")),
-                    1665740480, // * UNIX timestamp of last checkpoint block, Fri, 06 May 2022 03:06:25
+                    (0, uint256S("0x000000b4079fa10a374d758244f104a3d6ffda19c650197522c3676325c7eb48")),
+                    1666005517, // * UNIX timestamp of last checkpoint block, Fri, 06 May 2022 03:06:25
                     0,    // * total number of transactions between genesis and last checkpoint
                                 //   (the tx=... number in the SetBestChain debug.log lines)
                     0      // * estimated number of transactions per day after checkpoint
