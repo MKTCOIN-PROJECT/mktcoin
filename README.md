@@ -12,7 +12,7 @@ The Marketcoin is a hybrid PoW/PoS based cryptocurrency
 * Transaction (default 6 confirmation) blocks
 * * Block Rewards
 	* PoW   25 MKT per block (for 10000 blocks)
-	* PoS   200 MKT per block (halving every 4 years)
+	* PoS   200 MKT per block (halving every 2 years)
 	  *  Min. stake age   1 minute
 	  *  Max. stake age   Unlimited
 * Target spacing    2 minutes
